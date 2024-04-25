@@ -1,0 +1,24 @@
+import javax.swing.*;
+
+public class table {
+	JFrame f;
+	JTable jt;
+	table(){
+		f = new JFrame("JTable Demo");
+		String data[][] = {{"101", "Rijan Maharjan", "89643"},
+		{"102", "Sunaina Maharjan", "667674"},
+		{"103", "Suhana Maharjan", "5003"}};
+		String column[] = {"ID", "Name","Salary"};
+		jt = new JTable(data,column);
+		jt.setBounds(30,40,200,300);
+		JScrollPane sp = new JScrollPane(jt);
+		f.add(sp);
+		f.setSize(300, 200);
+		f.setVisible(true);
+		}
+	
+	public static void main(String[] args) {
+		new table();
+	}
+
+}
