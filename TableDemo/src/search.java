@@ -14,7 +14,7 @@ public class search implements ActionListener{
 	static JTable table;
 	
 	String driverName = "com.mysql.jdbc.Driver";
-	String url = "jdbc:mysql://localhost:3306/java";
+	String url = "jdbc:mysql://localhost/java";
 	String userName = "root";
 	String password = "";
 	String[] columnNames = {"id", "name", "address","contact"};

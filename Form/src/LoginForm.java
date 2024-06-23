@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class LoginForm implements ActionListener {
 	
-	JTextField usrText, passText;
+	JTextField usrText, passText, resultText;
 	
 	public void login() {
 		JFrame fam = new JFrame("Login Form");
@@ -23,21 +23,27 @@ public class LoginForm implements ActionListener {
 		password.setText("Password :");
 		password.setBounds(74, 70, 100, 40);
 		
+		JLabel result = new JLabel();
+		result.setText("Password :");
+		result.setBounds(74, 100, 100, 40);
+		
 		//User Name Text Field
 		 usrText = new JTextField(10);
 		 usrText.setBounds(150, 48, 200, 25);
 		 
 		 //Password Text Field
-		 passText = new JPasswordField(20);
+		 passText = new JTextField(20);
 		 passText.setBounds(150, 78, 200, 25);
-		
+		 
+		 		
 		//Add To frame
 		fam.add(username);fam.add(usrText);
 		fam.add(password);fam.add(passText);
+		
 		fam.add(btn);fam.add(btn2);
 		
 		btn.addActionListener(this);//onclick it will call action perform
-		
+		btn2.addActionListener(this);
 		fam.setLayout(null);
 		fam.setSize(500,500);
 		fam.setVisible(true);
@@ -50,6 +56,10 @@ public class LoginForm implements ActionListener {
 	
 @Override
 public void actionPerformed(ActionEvent e) {
+//	if(e.getSource()==btn2) {
+//		Register t = new Register();
+//		t.Register();
+//	}
 	String username = usrText.getText();
 	System.out.println("Hello " +username);
 }

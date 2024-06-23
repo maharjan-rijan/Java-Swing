@@ -11,8 +11,8 @@ public class test {
 		Statement stmt = conn.createStatement();
 		
 		Read(stmt);
-//		Update(stmt);
-		Insert(stmt);
+		Update(stmt);
+//		Insert(stmt);
 //		Delete(stmt);
 		
 	} catch (SQLException e) {
@@ -27,10 +27,8 @@ public class test {
 			while(rs.next()) {
 				System.out.print(" ID: " + rs.getInt("id"));
 				System.out.print(" Name: " + rs.getString("name"));
-				System.out.print(" User Name: " + rs.getString("userName"));
-				System.out.print(" Password: " + rs.getString("password"));
+				System.out.print(" Level: " + rs.getString("level"));
 				System.out.print(" Address: " + rs.getString("address"));
-				System.out.print(" Contact: " + rs.getInt("phone"));
 				System.out.println();
 			}
 		} catch (SQLException e) {
@@ -39,24 +37,24 @@ public class test {
 	}
 	
 //Update Data
-//public static void Update(Statement stmt) {
-//	String sql = "Update students set name = 'Sunaina Maharjan' where id = 2";
-//	try {
-//		stmt.executeUpdate(sql);
-//	} catch(SQLException e) {
-//		System.out.println(e);	
-//	}
-//}
-
-//	Insert Data
-public static void Insert(Statement stmt) {
-	String sql = "INSERT INTO students VALUES (null, 'Suhana', 'Kisipide', 99740)";
+public static void Update(Statement stmt) {
+	String sql = "Update students set name = 'Sunaina' where id = 6";
 	try {
 		stmt.executeUpdate(sql);
 	} catch(SQLException e) {
 		System.out.println(e);	
 	}
 }
+
+//	Insert Data
+//public static void Insert(Statement stmt) {
+//	String sql = "INSERT INTO students VALUES (null, 'Suhana', 'BBS', 'Kisipide')";
+//	try {
+//		stmt.executeUpdate(sql);
+//	} catch(SQLException e) {
+//		System.out.println(e);	
+//	}
+//}
 
 //Delete Data	
 //public static void Delete(Statement stmt) {

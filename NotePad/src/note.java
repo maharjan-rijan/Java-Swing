@@ -38,7 +38,7 @@ public class note implements ActionListener {
 		file = new JMenu("File");
 		edit = new JMenu("Edit");
 		help = new JMenu("Help");
-		file.add(nt);file.add(nw);file.add(open);file.add(save); file.add(sa);file.add(del);
+		file.add(nt);file.add(nw);file.add(open);file.add(save); 		file.add(sa);file.add(del);
 		edit.add(cut);edit.add(copy);edit.add(paste);edit.add(selectAll);
 		mb.add(file);mb.add(edit);mb.add(help);
 		ta = new JTextArea();
